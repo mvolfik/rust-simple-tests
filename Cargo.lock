@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "helenos-rust-tests"
+name = "rtest"
 version = "0.1.0"
