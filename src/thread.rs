@@ -69,8 +69,9 @@ pub fn test_scheduling() -> Result<(), Box<dyn std::error::Error>> {
                 let lower = (j + 1) * THREAD_COUNT;
                 if *num < upper {
                     return Err(format!(
-                        "Thread {i}, loop iteration {j}: value {} not in expected range {}..{}",
-                        *num, upper, lower
+                        "Thread {i}, loop iteration {j}: value {} not in expected range {}..{}\n{}",
+                        *num, upper, lower,
+                        "This test verifies fairness of the scheduler, which is not fully deterministic, try re-running the test a few times"
                     ));
                 }
                 *num += 1;
